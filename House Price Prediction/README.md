@@ -42,40 +42,23 @@ The objectives of this project are to:
 ---
 
 ## Project Process Flow
-
-```text
-Business Problem
-       ↓
-Load Dataset
-       ↓
-Data Inspection
-       ↓
-Data Cleaning
-       ↓
-Exploratory Data Analysis
-       ↓
-Feature Engineering
-       ↓
-Categorical Encoding
-       ↓
-Data Preprocessing
-       ↓
-Train/Test Split
-       ↓
-Regression Model Training
-       ↓
-Model Evaluation
-       ↓
-Model Comparison
-       ↓
-XGBoost Hyperparameter Tuning
-       ↓
-Cross-Validation
-       ↓
-Feature Importance Analysis
-       ↓
-Final Model Selection
-       ↓
-Business Interpretation
-       ↓
-Conclusion
+```mermaid
+flowchart TD
+    A[Business Problem] --> B[Load Dataset]
+    B --> C[Data Inspection]
+    C --> D[Data Cleaning]
+    D --> E[Exploratory Data Analysis]
+    E --> F[Feature Engineering]
+    F --> G[Categorical Encoding]
+    G --> H[Data Preprocessing]
+    H --> I[Train/Test Split]
+    I --> J[Regression Model Training]
+    J --> K[Model Evaluation]
+    K --> L[Model Comparison]
+    L --> M[XGBoost Hyperparameter Tuning]
+    M --> N[Cross-Validation]
+    N --> O[Feature Importance Analysis]
+    O --> P[Final Model Selection]
+    P --> Q[Business Interpretation]
+    Q --> R[Conclusion]
+```
