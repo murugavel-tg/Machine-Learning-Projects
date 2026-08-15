@@ -62,3 +62,64 @@ flowchart TD
     P --> Q[Business Interpretation]
     Q --> R[Conclusion]
 ```
+---
+
+# Model Evaluation and Comparison
+
+Multiple regression models were developed and evaluated to identify the best-performing model for house-price prediction.
+
+The models evaluated were:
+
+- Linear Regression
+- Random Forest Regressor
+- Gradient Boosting Regressor
+- XGBoost Regressor
+
+## Model Performance
+
+| Model | R² Score |
+|---|---:|
+| Linear Regression | 0.5785 |
+| Random Forest Regressor | 0.6879 |
+| Gradient Boosting Regressor | 0.6699 |
+| **XGBoost Regressor** | **0.7197** |
+
+### Best Performing Model
+
+**XGBoost Regressor**
+
+The XGBoost model achieved the highest test-set R² score of **0.7197** among the evaluated models.
+
+Therefore, XGBoost was selected as the final model for the house-price prediction project.
+
+---
+
+# XGBoost Model Performance
+
+The XGBoost model achieved the following test-set result:
+
+| Metric | Result |
+|---|---:|
+| **R² Score** | **0.7197** |
+
+The result indicates that the XGBoost model provided the strongest predictive performance among the models evaluated in this project.
+
+---
+
+# Hyperparameter Tuning
+
+Because XGBoost achieved the best initial performance, hyperparameter tuning was performed to identify a stronger configuration.
+
+`RandomizedSearchCV` was used to search across different XGBoost hyperparameter combinations.
+
+The tuning process used:
+
+- 20 randomized parameter combinations
+- 5-fold cross-validation
+- R² as the scoring metric
+- `random_state=42`
+
+The optimized model was stored as:
+
+```python
+best_model
