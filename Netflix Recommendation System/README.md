@@ -32,3 +32,4 @@ The project uses two datasets:
 
 ```text
 combined_data_1.txt
+movie_titles.csv
